@@ -5,18 +5,24 @@ function setup() {
   createCanvas(windowWidth, windowHeight)
   // console.log(`${windowWidth}, ${windowHeight}`)
   noStroke()
-  background(255)
+  drawMainMenu()
+}
 
+
+
+function drawMainMenu() {
+  background(255);
+
+  text("Main Menu", 0, 0);
   //button
   button = createButton('save1');
-  button.position(0, 0);
+  button.position(0, 10);
   button.mousePressed(save1);
 
   //button
   button = createFileInput(load1)
-  button.position(50, 0);
+  button.position(50, 10);
   //button.mousePressed(load1);
-
 }
 
 function save1() {
@@ -30,12 +36,9 @@ function load1() {
 
 }
 
-function draw() {
-  background(255)
-}
-
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight)
+  resizeCanvas(windowWidth, windowHeight);
+  background(255);
 }
 
